@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Emiliano Mondaini">
+<meta name="copyright" content="Copyright © 2023 Emi Emporio Smartphones">
+<meta name="description" content="Scopri la nostra selezione di smartphone al miglior prezzo su Emi Emporio Smartphones.">
+<meta name="keywords" content="smartphone, acquista online, offerte, sconti, telefoni cellulari">
+    <title>Smartphones E-commerce JS</title>
+    <style>
+        
+        .hidden {
+            visibility: hidden;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Esercizio 1 -->
+    <h1>Emi Emporio Smartphones</h1>
+
+    <!-- Esercizio 2 -->
+    <table>
+        <tr>
+            <th>Immagine</th>
+            <th>Prodotto</th>
+            <th>Descrizione</th>
+            <th>Prezzo</th>
+            <th>Link Amazon</th>
+        </tr>
+        <!-- Esercizio 3 e 4 -->
+        <tr>
+            <td><img src="./assets/immagini/smartphone1.webp" alt="Smartphone 1"></td>
+            <td>Smartphone 1</td>
+            <td>Descrizione del Smartphone </td>
+            <td id="price1">$499</td>
+            <td><a href="https://www.amazon.com/smartphone1">Acquista su Amazon</a></td>
+        </tr>
+        <tr>
+            <td><img src="./assets/immagini/smartphone2.jpg" alt="Smartphone 2"></td>
+            <td>Smartphone 2</td>
+            <td>Descrizione del Smartphone </td>
+            <td id="price2">$699</td>
+            <td><a href="https://www.amazon.com/smartphone2">Acquista su Amazon</a></td>
+        </tr>
+        <tr>
+            <td><img src="./assets/immagini/smartphone3.avif" alt="Smartphone 3"></td>
+            <td>Smartphone 3</td>
+            <td>Descrizione del Smartphone </td>
+            <td id="price3">$799</td>
+            <td><a href="https://www.amazon.com/smartphone3">Acquista su Amazon</a></td>
+        </tr>
+        <tr>
+            <td><img src="./assets/immagini/smartphone4.jpeg" alt="Smartphone 4"></td>
+            <td>Smartphone 4</td>
+            <td>Descrizione del Smartphone </td>
+            <td id="price4">$899</td>
+            <td><a href="https://www.amazon.com/smartphone4">Acquista su Amazon</a></td>
+        </tr>
+        <tr>
+            <td><img src="./assets/immagini/smartphone5.jpg" alt="Smartphone 5"></td>
+            <td>Smartphone 5</td>
+            <td>Descrizione del Smartphone </td>
+            <td id="price5">$999</td>
+            <td><a href="https://www.amazon.com/smartphone5">Acquista su Amazon</a></td>
+        </tr>
+    </table>
+
+    <!-- Esercizio 5 -->
+    <footer>
+        <p>Emi Emporio Smartphones</p>
+        <p>Via degli Smartphone, 123 - Rimini, Italia</p>
+    </footer>
+
+    <!-- Esercizio 6 -->
+    <input type="text" id="comment" placeholder="Lascia un commento">
+
+    <script>
+        // ESERCIZIO 7
+        function changeH1() {
+            document.querySelector('h1').innerText = "Nuovo nome negozio";
+        }
+
+        // ESERCIZIO 8
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "lightgray";
+        }
+
+        // ESERCIZIO 9
+        function changeAddress() {
+            document.querySelector('footer p:nth-of-type(2)').innerText = "Via delle FantasiebTelefoniche, 456 - Roma, Italia";
+        }
+
+        // ESERCIZIO 10
+        function addAmazonLinkClass() {
+            const amazonLinks = document.querySelectorAll('table a');
+            amazonLinks.forEach(link => {
+                link.classList.add('amazon-link');
+            });
+        }
+
+        // ESERCIZIO 11
+        function toggleImageVisibility() {
+            const images = document.querySelectorAll('table img');
+            images.forEach(image => {
+                image.classList.toggle('hidden');
+            });
+        }
+
+        // ESERCIZIO 12
+        function changePriceColor() {
+            const prices = document.querySelectorAll('table td[id^="price"]');
+            prices.forEach(price => {
+                const colors = ['red', 'blue', 'green', 'orange', 'purple'];
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                price.style.color = randomColor;
+            });
+        }
+    </script>
+</body>
+</html>
